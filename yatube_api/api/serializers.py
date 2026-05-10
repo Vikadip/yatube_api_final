@@ -10,7 +10,7 @@ class PostSerializer(serializers.ModelSerializer):
         slug_field='username',
         read_only=True
     )
-    
+
     class Meta:
         model = Post
         fields = ('id', 'text', 'pub_date', 'author', 'image', 'group')
@@ -27,7 +27,7 @@ class CommentSerializer(serializers.ModelSerializer):
         slug_field='username',
         read_only=True
     )
-    
+
     class Meta:
         model = Comment
         fields = ('id', 'author', 'post', 'text', 'created')

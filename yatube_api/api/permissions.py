@@ -6,6 +6,7 @@ class IsAuthorOrReadOnly(permissions.BasePermission):
     Разрешение: автор может редактировать/удалять свой контент,
     остальным только чтение
     """
+
     def has_object_permission(self, request, view, obj):
         # Чтение разрешено всем
         if request.method in permissions.SAFE_METHODS:
